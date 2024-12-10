@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "binary_trees.h"
 /**
-*binary_tree_siblings- trouve le frere d'une node
+*binary_tree_sibling- trouve le frere d'une node
 *@node: Pointeur sur la node
 *Return: Pointeur sur sibling
 */
@@ -10,6 +10,7 @@
 binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 {
 	binary_tree_t *temp = node;
+
 	if (node == NULL || node->parent == NULL)
 	return (NULL);
 	temp = temp->parent;
@@ -23,6 +24,6 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 		temp = temp->right;
 		return (temp);
 	}
-	else 
+	else
 	return (NULL);
 }
